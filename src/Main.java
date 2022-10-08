@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,6 +14,7 @@ public class Main {
         */
         //testing mystack
 
+        /*
         MyStack newMyStack = new MyStack(5);
         try{
             newMyStack.push(2);
@@ -35,6 +37,21 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
+
+        for(int i = 0; i <= newMyStack.getTop(); i++){
+            System.out.println(newMyStack.get(i));
+        }
+        */
+
+         //built in implementation
+        Stack<String> games = new Stack<String>();
+        //adding to the stack
+        games.add("Call of Duty");
+        games.add("Guitar Hero");
+        games.add("Super Monkey Ball");
+
+        System.out.println(games.pop());
+        System.out.println(games);
 
     }
 
