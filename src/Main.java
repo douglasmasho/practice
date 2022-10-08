@@ -13,7 +13,7 @@ public class Main {
         System.out.println(HowManyTimes(numbers, 2) );
         */
         //testing mystack
-
+        /*
 
         MyStack<Integer> newMyStack = new MyStack<Integer>(5);
         try{
@@ -42,8 +42,8 @@ public class Main {
             System.out.println(newMyStack.get(i));
         }
 
+*/
 
-        /*
          //built in implementation
         Stack<String> games = new Stack<String>();
         //adding to the stack
@@ -52,9 +52,12 @@ public class Main {
         games.add("Super Monkey Ball");
 
         System.out.println(games.pop());
+        System.out.println(games.pop());
+        System.out.println(games.pop());
         System.out.println(games);
 
-         */
+
+
 
     }
 

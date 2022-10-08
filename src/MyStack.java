@@ -36,4 +36,8 @@ public class MyStack<T> {
     public int getTop(){
         return top;
     }
+
+    public T peek(){
+        return stack.get(top);
+    }
 }
