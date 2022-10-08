@@ -1,41 +1,36 @@
-public class MyStack {
-    private int[] stack;
+import java.util.ArrayList;
+
+public class MyStack<T> {
+    private ArrayList<T> stack;
     private int top;
-    private int amount;
 
     public MyStack(int size){
-        stack = new int[size];
+        stack = new ArrayList<T>();
         top = -1;
-        amount = size;
     }
 
     public boolean isEmpty(){
         return top == -1;
     }
-    public boolean isFull(){
-        return top == amount - 1;
-    }
 
-    public void push(int data) throws Exception{
-        if(isFull()){
-            throw new Exception("Overflow");
-        }else{
+    public void push(T data) throws Exception{
             top++;
-            stack[top] = data;
-        }
+            stack.add(data);
     }
 
-    public int pop() throws Exception{
+    public T pop() throws Exception{
         if(isEmpty()){
             throw new Exception("Underflow");
         }else{
+            T lastElement = stack.get(top);;
+            stack.remove(top);
             top--;
-            return stack[top + 1];
+            return lastElement;
         }
     }
 
-    public int get(int index){
-        return stack[index];
+    public T get(int index){
+        return stack.get(index);
     }
 
     public int getTop(){

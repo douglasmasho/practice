@@ -14,8 +14,8 @@ public class Main {
         */
         //testing mystack
 
-        /*
-        MyStack newMyStack = new MyStack(5);
+
+        MyStack<Integer> newMyStack = new MyStack<Integer>(5);
         try{
             newMyStack.push(2);
             newMyStack.push(5);
@@ -41,8 +41,9 @@ public class Main {
         for(int i = 0; i <= newMyStack.getTop(); i++){
             System.out.println(newMyStack.get(i));
         }
-        */
 
+
+        /*
          //built in implementation
         Stack<String> games = new Stack<String>();
         //adding to the stack
@@ -52,6 +53,8 @@ public class Main {
 
         System.out.println(games.pop());
         System.out.println(games);
+
+         */
 
     }
 
