@@ -48,7 +48,7 @@ public class AlgoClass {
         }
 
         if(count == 0){ //throw an exception if the count==0. Remmeber you cannot divide by 0;
-            throw new Exception("There are no values less than your parameter");
+            throw new Exception("There are no values less than or equal to your parameter");
         }else{
             return Math.round(((double)sum/count*100)/100);
         }
