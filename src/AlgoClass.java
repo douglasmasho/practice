@@ -8,6 +8,40 @@ public class AlgoClass {
 
     }
 
+    public boolean Delete(int x){
+
+        for(int i = 0; i < givenList.size(); i++){
+            if(givenList.get(i) == x){
+                givenList.remove(i);
+            }
+        }
+
+
+        return false;
+    }
+
+    public void Invert(){
+        List tempList = new ArrayList<Integer>();
+        for(int i = givenList.size()-1; i >= 0; i--){
+            tempList.add(givenList.get(i));
+        }
+        givenList = tempList;
+    }
+
+    public int Count(int x){
+        int count = 0;
+        for(int i : givenList){
+            if(i > x){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public List GetList(){
+        return givenList;
+    }
+
     public List Copy(int start, int end) throws Exception{
         //the returned list must start with the elementAt get(start-1) and end with elementAt get(end-1)
         //but since we need the elements in between, it will be better to use a loop
@@ -47,4 +81,7 @@ public class AlgoClass {
 
         return sum/givenList.size();
     }
+
+
+
 }
