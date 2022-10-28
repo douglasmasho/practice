@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Date;
+import java.time.*;
 
 public class Library {
     private ArrayList<Book> books;
@@ -25,11 +26,11 @@ public class Library {
     public boolean checkAvailability(String idNum) throws Exception{
         //loop through all the books
         //get current date
-        Date current = new Date();
+        LocalDate current = LocalDate.now();
         for(Book i:books){
             //if the book is
             if(i.GetIDNum().equals(idNum)){
-                if(current.before(i.getBorrowedDate()) || current.after(i.getReturnedDate())){
+                if(current.isBefore(i.getBorrowedDate()) || current.isAfter(i.getReturnedDate())){
                     return true;
                 }else{
                     return false;
@@ -37,5 +38,19 @@ public class Library {
             }
         }
         throw new Exception("Book not found");
+    }
+
+
+    public int HowManyBooksToBeReturned(){
+        int count = 0;
+        for(Book i: books){
+            LocalDate current = LocalDate.now();
+            System.out.println(current);
+            System.out.println(i.getReturnedDate());
+            if(i.getReturnedDate().equals(current)){
+                count++;
+            }
+        }
+        return count;
     }
 }

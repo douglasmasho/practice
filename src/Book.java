@@ -1,13 +1,14 @@
 import java.util.Date;
+import java.time.*;
 
 public class Book {
     private String name;
     private String idNum;
-    private Date borrowedDate;
-    private Date returnedDate;
+    private LocalDate borrowedDate;
+    private LocalDate returnedDate;
 
 
-    public Book(String newName, String newIDNum, Date newBorrowedDate, Date newReturnedDate){
+    public Book(String newName, String newIDNum, LocalDate newBorrowedDate, LocalDate newReturnedDate){
         name = newName;
         idNum = newIDNum;
         borrowedDate = newBorrowedDate;
@@ -22,18 +23,18 @@ public class Book {
         return idNum;
     }
 
-    public void SetBorrowedDate(Date newDate){
+    public void SetBorrowedDate(LocalDate newDate){
         borrowedDate = newDate;
     }
 
-    public void SetReturnedDate(Date newDate){
+    public void SetReturnedDate(LocalDate newDate){
         returnedDate = newDate;
     }
 
-    public Date getBorrowedDate(){
+    public LocalDate getBorrowedDate(){
         return borrowedDate;
     }
-    public Date getReturnedDate(){
+    public LocalDate getReturnedDate(){
         return returnedDate;
     }
 
