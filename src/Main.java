@@ -12,6 +12,7 @@ public class Main {
         newStack.push(5);
         System.out.println(newStack);
         System.out.println(test.GetAverage(newStack));
+        System.out.println(test.DoesStackContain(newStack,3));
         System.out.println(newStack);
     }
 }

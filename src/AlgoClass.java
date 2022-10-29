@@ -3,6 +3,32 @@ import java.util.Stack;
 public class AlgoClass {
     public AlgoClass(){
     }
+    public boolean DoesStackContain(Stack<Integer> s,int x){
+        //create a temp stack
+        Stack<Integer> tempStack = new Stack<Integer>();
+        //since s must be in the original state, you cannot return true immediately if you find x,
+        //so create a variable to show that x is found/not. you then return that variable once you are sure
+        //s is back in its original state
+        boolean found = false;
+
+        //start popping every element from s and pushing into tempstack,
+        // while you pop, check if last is equal to x.
+        while(!s.isEmpty()){
+            int last = s.pop();
+            if(last == x){
+                found = true;
+            }
+            //push into tempStack
+            tempStack.push(last);
+        }
+
+        //put s into its original state by popping from temp and pushing into s
+        while(!tempStack.isEmpty()){
+            s.push(tempStack.pop());
+        }
+
+        return found;
+    }
 
     public double GetAverage(Stack<Integer> s){
         //create a temp stack
