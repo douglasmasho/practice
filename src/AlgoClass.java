@@ -6,6 +6,30 @@ public class AlgoClass {
 
     }
 
+
+    public MyQueue<Integer> BiggerThan(MyQueue<Integer> q, int x){
+        //create a temporary queue
+        MyQueue<Integer> tempQueue = new MyQueue<Integer>();
+        //create the result queue
+        MyQueue<Integer> resQueue = new MyQueue<Integer>();
+        //loop through the queue q, dequeuing, enqueueing into all into the tempqueue, but only into the result queue if front > x
+        while(!q.isEmpty()){
+            var front = q.dequeue();
+            tempQueue.enqueue(front);
+            if(front > x){
+                resQueue.enqueue(front);
+            }
+        }
+
+        //populate the original list
+        while(!tempQueue.isEmpty()){
+            q.enqueue(tempQueue.dequeue());
+        }
+        System.out.println(q.printQueue());
+        //return the result queue
+        return resQueue;
+    }
+
     public MyQueue Invert(MyQueue q){
         //create a stack to put all the element, uninverted, from q
         Stack tempStack = new Stack();
@@ -61,7 +85,7 @@ public class AlgoClass {
         }
 
 //        do not print in class methods....just want to see if q is in original state
-        System.out.println(q.printQueue());
+        //System.out.println(q.printQueue());
         return count;
     }
 
@@ -83,4 +107,7 @@ public class AlgoClass {
 
         return max;
     }
+
+
+
 }

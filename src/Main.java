@@ -11,6 +11,7 @@ public class Main {
 
 //        System.out.println(test.Invert(q).printQueue());
 //        System.out.println(test.Find(q, 1));
-        System.out.println(test.Maximum(q));
+//        System.out.println(test.Maximum(q));
+        System.out.println(test.BiggerThan(q,2).printQueue());
     }
 }
