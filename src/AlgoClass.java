@@ -12,7 +12,7 @@ public class AlgoClass {
         MyQueue<Integer> tempQueue = new MyQueue<Integer>();
         //create the result queue
         MyQueue<Integer> resQueue = new MyQueue<Integer>();
-        //loop through the queue q, dequeuing, enqueueing into all into the tempqueue, but only into the result queue if front > x
+        //loop and dequeue through the queue q, enqueueing all into the tempqueue, but only into the result queue if front > x
         while(!q.isEmpty()){
             var front = q.dequeue();
             tempQueue.enqueue(front);
