@@ -96,6 +96,7 @@ public class AlgoClass {
 
         while(!q.isEmpty()){
             var front = q.dequeue();
+            tempStack.enqueue(front);
             if(front > max){
                 max = front;
             }
